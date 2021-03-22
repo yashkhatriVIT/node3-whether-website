@@ -6,7 +6,7 @@ myForm.addEventListener('submit', (e)=>{
     e.preventDefault();
     let input = document.getElementById('bar');
     let value  = input.value;
-    fetch(`http://localhost:3000/whether?address=${value}`)
+    fetch(`/whether?address=${value}`)
     .then(response => {
         return response.json();
     })
