@@ -16,7 +16,8 @@ let forecast = (coordinates, callback) => {
         }
         else {
             let data = response.body.current;
-            callback(undefined, `It is currently ${data.temperature} F out, but it feels like ${data.feelslike} F`);
+            console.log(data);
+            callback(undefined, `It is currently ${data.temperature} F out, but it feels like ${data.feelslike} F and there is possiblity of ${data.weather_descriptions[0]}`);
         }
     })
 }
